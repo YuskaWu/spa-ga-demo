@@ -38,7 +38,8 @@ export default {
       this.content = postContent
       document.querySelector('title').innerText = postTitle
       await this.$nextTick()
-      gtag('config', 'UA-17681458-7', { page_path: this.$route.path })
+      // gtag('config', 'UA-17681458-7', { page_path: this.$route.path })
+      gtag('config', 'UA-17681458-7')
     }
   }
 }
