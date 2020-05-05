@@ -38,8 +38,9 @@ export default {
       this.content = postContent
       document.querySelector('title').innerText = postTitle
       await this.$nextTick()
+      const { pathname, hash, search } = location
       // gtag('config', 'UA-17681458-7', { page_path: this.$route.path })
-      gtag('config', 'UA-17681458-7')
+      gtag('config', 'UA-17681458-7', { page_path: pathname + hash + search })
     }
   }
 }
