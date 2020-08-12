@@ -40,7 +40,11 @@ export default {
       await this.$nextTick()
       const { pathname, hash, search } = location
       // gtag('config', 'UA-17681458-7', { page_path: this.$route.path })
+      // ga('send', 'pageview')
       gtag('config', 'UA-17681458-7', { page_path: pathname + hash + search })
+      setTimeout(() => {
+        gtag('config', 'UA-17681458-7', { page_path: pathname + hash + search })
+      }, 1000)
     }
   }
 }
